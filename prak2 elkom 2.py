@@ -12,14 +12,14 @@ print (" \_______/|__/  |__/ \_______/|__/      |__/|__/  |__/ \_______/ \______
 from math import sqrt
 
 a, b, c = (
-  int(input('Masukkan nilai a: ')),
-  int(input('Masukkan nilai b: ')),
-  int(input('Masukkan nilai c: '))
+  int(input('Masukkan angka pertama: ')),
+  int(input('Masukkan angka kedua: ')),
+  int(input('Masukkan angka ketiga: '))
 )
 
 if a > b and a > c:
-  print('A yang terbesar', a)
+  print('Angka terbesar adalah angka pertama: ', a)
 elif b > a and b > c:
-  print('B yang terbesar', b)
+  print('Angka terbesar adalah angka kedua: ', b)
 else:
-  print('C yang terbesar', c)
+  print('Angka terbesar adalah angka ketiga: ', c)
