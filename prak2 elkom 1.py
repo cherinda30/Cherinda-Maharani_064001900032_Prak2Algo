@@ -11,37 +11,31 @@ print (" \_______/|__/  |__/ \_______/|__/      |__/|__/  |__/ \_______/ \______
 
 from math import sqrt
 
-formula = input('sisi mana yang akan dihitung? (a,b,c) ')
+sisi = input("Sisi mana yang Anda ingin hitung? (a,b,c): ")
 
-if formula == 'c':
+if sisi == "c":
+    a = int(input("Masukkan panjang a: "))
+    b = int(input("Masukkan panjang b: "))
+    c = sqrt(a * a + b * b)
+    print("Panjang sisi c adalah:", round(c))
 
-    
-	side_a = int(input('masukkan panjang a: '))
-	side_b = int(input('masukkan panjang b: '))
+elif sisi == "a":
+    b = int(input("Masukkan panjang b: "))
+    c = int(input("Masukkan panjang c: "))
+    if (c < b):
+        print("Panjang c tidak valid!")
+        c = int(input("Masukkan panjang c: "))
 
-	side_c = sqrt(side_a * side_a + side_b * side_b)
-	
-	print('panjang c adalah: ' )
-	print(side_c)
+    a = sqrt(c * c - b * b)
+    print("Panjang sisi a adalah:", round(a))
 
-elif formula == 'a':
-    side_b = int(input('masukkan panjang b: '))
-    side_c = int(input('masukkan panjang c: '))
-    
-    side_a = sqrt((side_c * side_c) - (side_b * side_b))
-    
-    print('panjang a adalah' )
-    print(side_a)
+elif sisi == "b":
+    a = int(input("Masukkan panjang a: "))
+    c = int(input("Masukkan panjang c: "))
+    if (c < a):
+        print("Panjang c tidak valid!")
+        c = int(input("Masukkan panjang c: "))
 
-elif formula == 'b':
-    side_a = int(input('masukkan panjang a: '))
-    side_c = int(input('masukkan panjang c: '))
-        
-    side_c = sqrt(side_c * side_c - side_a * side_a)
-    
-    print('panjnag b adalah')
-    print(side_c)
-
-else:
-	print('tolong pilih antara a,b atau c')
+    b = sqrt(c * c - a * a)
+    print("Panjang sisi b adalah:", round(b))
 	
